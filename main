@@ -1,6 +1,25 @@
---USEFUL (NOT COMMON) COMMANDS REGULARLY USED FOR FREECODECAMP RELATIONAL DATABASE CERTIFICATION
+--USEFUL COMMANDS REGULARLY USED FOR FREECODECAMP RELATIONAL DATABASE CERTIFICATION
 
 --Activate DB from User
 psql --username=freecodecamp dbname=mario_database 
 
+--Add rows
+ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1959-10-18', 13, 52.2, 3);
 
+--Delete rows
+DELETE FROM more_info WHERE character_id=3;
+
+--Select with condition
+SELECT character_id, name FROM characters WHERE name='Toad'
+
+--Rename columns
+ALTER TABLE more_info RENAME COLUMN height TO height_in_cm
+
+--Create tables with columns from beginning
+CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
+
+--Add columns and constrains
+ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;
+
+--Add Foreign Key
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
