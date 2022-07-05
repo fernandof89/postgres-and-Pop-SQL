@@ -1,0 +1,6 @@
+--USEFUL (NOT COMMON) COMMANDS REGULARLY USED FOR FREECODECAMP RELATIONAL DATABASE CERTIFICATION
+
+--Activate DB from User
+psql --username=freecodecamp dbname=mario_database 
+
+
