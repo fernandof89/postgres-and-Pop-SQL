@@ -37,3 +37,11 @@ SELECT columns FROM table_1 FULL JOIN table_2 ON table_1.primary_key_column = ta
 SELECT columns FROM junction_table
 FULL JOIN table_1 ON junction_table.foreign_key_column = table_1.primary_key_column
 FULL JOIN table_2 ON junction_table.foreign_key_column = table_2.primary_key_column;
+
+--[AGREGGATIONS]
+
+--Select to nearest Integer
+SELECT FLOOR(AVG(POPULATION)) FROM CITY
+
+--Using of rounded to next Integer and function Replace (changes from datatype to another automatically(?)
+SELECT CEIL(AVG(Salary) - AVG(REPLACE(Salary,'0',''))) FROM EMPLOYEES;
