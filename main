@@ -4,7 +4,7 @@
 psql --username=freecodecamp dbname=mario_database 
 
 --Add rows
- INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1959-10-18', 13, 52.2, 3);
+ INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1959-10-18', 13, 52.2, 3),(),();
 
 --Delete rows
 DELETE FROM more_info WHERE character_id=3;
@@ -23,3 +23,9 @@ ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;
 
 --Add Foreign Key
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
+
+--Set existing column as foreign key
+ALTER TABLE table_name ADD FOREIGN KEY(column_name) REFERENCES referenced_table(referenced_column);
+
+--Create a composite primary key
+ALTER TABLE table_name ADD PRIMARY KEY(column1, column2);
