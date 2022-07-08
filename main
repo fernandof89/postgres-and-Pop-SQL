@@ -45,3 +45,6 @@ SELECT FLOOR(AVG(POPULATION)) FROM CITY
 
 --Using of rounded to next Integer and function Replace (changes from datatype to another automatically(?)
 SELECT CEIL(AVG(Salary) - AVG(REPLACE(Salary,'0',''))) FROM EMPLOYEES;
+
+--Group by 1 or Order by 1 meaning:
+--means - group by first column from SELECT . The same pattern could be used for ORDER BY :
