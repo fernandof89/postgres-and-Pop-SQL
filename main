@@ -48,3 +48,14 @@ SELECT CEIL(AVG(Salary) - AVG(REPLACE(Salary,'0',''))) FROM EMPLOYEES;
 
 --Group by 1 or Order by 1 meaning:
 --means - group by first column from SELECT . The same pattern could be used for ORDER BY :
+
+--Round and Truncate of decimals x
+ROUND(num, x) / TRUNCATE(num, x)
+
+--Query 1 column with a condition from another
+SELECT ROUND(LONG_W, 4) 
+FROM STATION
+WHERE 
+    LAT_N = (SELECT MAX(LAT_N)
+            FROM STATION
+            WHERE LAT_N < 137.2345);
