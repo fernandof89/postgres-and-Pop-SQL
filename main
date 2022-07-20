@@ -21,6 +21,9 @@ CREATE TABLE table_name(column_name DATATYPE CONSTRAINTS);
 --Add columns and constrains
 ALTER TABLE sounds ADD COLUMN filename VARCHAR(40) NOT NULL UNIQUE;
 
+--Add Primary Key
+ALTER TABLE test1 ADD COLUMN id SERIAL PRIMARY KEY;
+
 --Add Foreign Key
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
 
