@@ -65,3 +65,6 @@ WHERE
             
 --Square and Square root
 POWER(num, x) / SQRT()
+
+--Change Primary_key (or other column) nane
+ALTER TABLE dishes RENAME COLUMN name TO d_name;
