@@ -68,3 +68,6 @@ POWER(num, x) / SQRT()
 
 --Change Primary_key (or other column) nane
 ALTER TABLE dishes RENAME COLUMN name TO d_name;
+
+--Generate a View / UNION
+https://www.youtube.com/watch?v=8jU8SrAPn9c
